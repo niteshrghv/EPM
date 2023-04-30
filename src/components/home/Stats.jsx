@@ -1,11 +1,11 @@
 import Plot from 'react-plotly.js';
 import {students} from "../../constants/studData.js";
-
+// import './Styles.css'
 const stats=()=>{
     const layout = {
     title: 'Grade Distribution',
-    height: 450,
-    width: 485
+    height: 430,
+    width: 380
   };
 
     let p=0;
@@ -42,7 +42,61 @@ const stats=()=>{
       }
     ];
   
-      return(<><br/><Plot
+      return(
+        <>
+        <style>{`#stats{border: 2px solid black;margin:10px; border-collapse: collapse;background-color: white;padding: 10px;}
+                #tab{display: flex;margin: 50px; background-color: white;box-shadow: 5px 10px 18px red;justify-items: center;
+                align-items: center;}`}</style>
+      <div id="tab">
+      <table id="stats">
+      <thead id="stats">
+        <tr id="stats">
+          <th id="stats">Details</th>
+          <th id="stats">Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="stats">
+          <td id="stats">Total Students</td>
+          <td id="stats">{all}</td>
+        </tr>
+
+        <tr id="stats">
+          <td id="stats">Passed Students</td>
+          <td id="stats">{p}</td>
+        </tr>
+
+        <tr id="stats">
+          <td id="stats">Failed Students</td>
+          <td id="stats">{f}</td>
+        </tr>
+        <tr id="stats">
+          <td id="stats">Maximum Grade</td>
+          <td id="stats">{max}</td>
+        </tr>
+        <tr id="stats">
+          <td id="stats">Average Grade</td>
+          <td id="stats">{avg}</td>
+        </tr>
+        <tr id="stats">
+          <td id="stats">Minimum Grade</td>
+          <td id="stats">{min}</td>
+        </tr>
+        <tr id="stats">
+          <td id="stats">Maximum Grade</td>
+          <td id="stats">{max}</td>
+        </tr>
+        <tr id="stats">
+          <td id="stats">Grades(6-8)</td>
+          <td id="stats">{d}</td>
+        </tr>
+        <tr id="stats">
+          <td id="stats">Grades(8-10)</td>
+          <td id="stats">{e}</td>
+        </tr>
+      </tbody>
+    </table>
+      <Plot
         data={[
           {
             x: ["All","Passed","Failed"],
@@ -61,17 +115,16 @@ const stats=()=>{
           },
         ]}
         layout={{
-          width: 486,
-          height: 450,
+          width: 380,
+          height: 430,
           title: 'Student Details',
-          xaxis: {title: 'X Axis'},
-          yaxis: {title: 'Y Axis'},
+         
         }}
       />
       <Plot
       data={data}
       layout={layout}
-    />
+      />
      <Plot
         data={[
           {
@@ -83,13 +136,13 @@ const stats=()=>{
           }
         ]}
         layout={{
-          width: 485,
-          height: 450,
-          title: 'Student Details',
-          xaxis: {title: 'X Axis'},
-          yaxis: {title: 'Y Axis'},
+          width: 380,
+          height: 430,
+          title: 'Student Grades',
+         
         }}
       />
+  </div>
       </>
       )
   

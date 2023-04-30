@@ -62,5 +62,15 @@ export const students = [
         examGrade:2,
         ratingGrade:4,
         comments:"Shachi Priya is a decent girl with below average academic performance. She has to do hardwork."
+    },
+    {
+        id: 8,
+        name: "Shachi Priya",
+        ticketNo:108,
+        ticketTopic:"FrontEnd",
+        examGrade:0,
+        ratingGrade:0,
+        comments:"Shachi Priya is a decent girl with below average academic performance. She has to do hardwork."
     }
+    
 ]

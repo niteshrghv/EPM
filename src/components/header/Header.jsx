@@ -23,7 +23,7 @@ const Header=()=>{
               <img src={logo} alt="logo" style={{width:70, marginRight:5, marginLeft:25}}/>
               <Typography variant="h4" style={{fontWeight:500, marginTop:15}}>THE GRADEBOOK</Typography>
             </Box>
-            <Typography variant="h6" style={{fontWeight:500, marginRight:25}}>{date.toDateString()}</Typography>
+            <Typography variant="h6" style={{fontWeight:500, marginRight:25}}>{date.toString()}</Typography>
           </StyledToolbar>
       </StyledHeader>
     </>

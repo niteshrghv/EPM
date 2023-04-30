@@ -21,8 +21,17 @@ const TableCompo=()=>{
   const [comments, setComments]=useState();
   const [selectedRows, setSelectedRows] = useState([]);
 
-  const handleRowClick = (rowId) => {
-    setSelectedRows([...selectedRows, rowId])
+  // const handleRowClick = (rowId) => {
+  //   setSelectedRows([...selectedRows, rowId])
+  // }
+  function handleRowClick(rowId) {
+    setSelectedRows((prevState) => {
+      if (prevState.includes(rowId)) {
+        return prevState.filter((rId) => rId !== rowId);
+      } else {
+        return [...prevState, rowId];
+      }
+    });
   }
 
   const openDialog=(student)=>{
