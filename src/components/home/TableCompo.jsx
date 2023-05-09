@@ -1,8 +1,6 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useContext } from 'react';
 
-import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TableFooter, TablePagination, Paper} from '@mui/material';
-
-import {Box, Typography, Button, styled} from '@mui/material';
+import {Button,Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TableFooter, TablePagination, Paper} from '@mui/material';
 
 // components
 import {students} from "../../constants/studData.js";
@@ -17,6 +15,7 @@ const TableCompo=()=>{
   const {text}=useContext(DataContext);
   const {alpha}=useContext(DataContext);
   const {alphaClicked}=useContext(DataContext);
+
 
   const [open, setOpen]=useState(false);
   const [comments, setComments]=useState();
@@ -139,7 +138,7 @@ const TableCompo=()=>{
           <TableCell align="right">{Math.round((0.6*student.examGrade)+(0.4*student.ratingGrade))}</TableCell>
           <TableCell align="right">{Math.round((0.6*student.examGrade)+(0.4*student.ratingGrade))>=4?"Passed":"Failed"}</TableCell>
           <TableCell align="right">
-            <Button style={{background:"#71C9CE", color:"#fff"}} onClick={()=>openDialog(student)} value={student}>
+            <Button style={{background:"#c0e613", color:"#e6134e"}} onClick={()=>openDialog(student)} value={student}>
               Details
             </Button>
           </TableCell>   
@@ -191,7 +190,7 @@ const TableCompo=()=>{
         </TableBody>
         <TableFooter>
           <TableRow>
-             <TablePagination
+            <TablePagination
               rowsPerPageOptions={[5, 10, 25, 100]}
               count={students.length}
               rowsPerPage={rowsPerPage}

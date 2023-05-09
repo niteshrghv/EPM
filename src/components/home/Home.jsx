@@ -11,7 +11,8 @@ import { DataContext } from '../../context/DataProvider';
 
 
 const StyledButton = styled(Button)({
-  background:"#71C9CE",
+  background:"#e6134e",
+  // background:"Ff0000",
   color:"#fff",
   fontSize:"14px",
   borderRadius:"10px",
@@ -40,10 +41,12 @@ const Home=()=>{
       <Headings/>
       <Filter/>
       <TableCompo/>
-      <StyledButton onClick={handleStatsBtn}>{statsBtn?trueStats:falseStats}</StyledButton>
-      {
-        statsBtn?<Stats/>:null
-      }   
+      <Box style={{display:"flex", justifyContent: "center"}}>
+        <StyledButton onClick={handleStatsBtn}>{statsBtn?trueStats:falseStats}</StyledButton>
+      </Box>
+        {
+          statsBtn?<Stats/>:null
+        }   
     </Box>
   )
 }

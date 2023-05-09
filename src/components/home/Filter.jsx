@@ -22,8 +22,7 @@ const Heading=styled(Box)`
 
 
 const FilterButton = styled(Button)({
-  background:"#71C9CE",
-  color:"#fff",
+    background:"#c0e613", color:"#e6134e",
   fontSize:"14px",
   borderRadius:"20px",
   height:"35px",

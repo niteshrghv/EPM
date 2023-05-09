@@ -84,8 +84,8 @@ const Stats=()=>{
           <td id="stats">{min}</td>
         </tr>
         <tr id="stats">
-          <td id="stats">Grades(4-6)</td>
-          <td id="stats">{c}</td>
+          <td id="stats">Maximum Grade</td>
+          <td id="stats">{max}</td>
         </tr>
         <tr id="stats">
           <td id="stats">Grades(6-8)</td>
